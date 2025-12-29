@@ -1,0 +1,278 @@
+https://chat.qwen.ai/s/d15380a2-7c17-4f51-8929-905c2b0c6556
+至此，我已经为您查找了知识库中标注三颗🌟的所有方法的原始论文和开源代码信息。这些方法涵盖了对抗攻击和防御的主要研究方向：
+攻击方法:
+白盒攻击: FGSM、ILLC、PGD、C&W
+黑盒攻击: Ensemble MI-FGSM、ZOO、Boundary Attack
+防御方法:
+预处理防御: HGD、数字水印、RND
+处理中防御: 防御蒸馏、MMC loss
+后处理防御: KEMLP
+
+（将代码下载到本地）首先记录找到的方法实现代码所使用的实验环境：
+使用的操作系统,自动微分架构pytorch、tensorflow或其他（优先选择pytorch），硬件要求（3060是否可以）,使用图像数据集类型（数据集的内容是什么）
+
+一、FGSM【https://arxiv.org/abs/1412.6572】
+🌟🌟🌟①【https://github.com/1Konny/FGSM】290🌟FGSM 和 I-FGSM 的简单 pytorch 实现
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+python 3.6.4
+pytorch 0.3.1.post2
+visdom(optional)
+tensorboardX(optional)
+tensorflow(optional)
+
+②【https://github.com/mkazmier/pytorch-fgsm-simple】0🌟FGSM 对抗攻击的简单示例
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+二、ILLC【https://arxiv.org/abs/1607.02533】
+①【https://github.com/Harry24k/AEPW-pytorch】19🌟"Adversarial Examples in the Physical World" 的 PyTorch 实现
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+②【https://github.com/as791/Adversarial-Example-Attack-and-Defense】136🌟此存储库包含使用 MNIST 数据集对三种对抗样本攻击方法 FGSM、IFGSM、MI-FGSM 以及一种用于防御所有攻击的知识蒸馏防御的实现。
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+🌟🌟🌟③【https://github.com/kasimte/adversarial-attacks-in-pytorch-example】10🌟快速梯度符号法与迭代最不可能类别，使用 PyTorch 中的 LeNet 和 DenseNet
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+三、PGD【https://arxiv.org/abs/1706.06083】
+🌟🌟🌟①【https://github.com/Harry24k/PGD-pytorch】158🌟《面向对抗攻击的深度学习模型》的 PyTorch 实现
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+②【https://github.com/MadryLab/mnist_challenge】756🌟探索神经网络在 MNIST 上的对抗鲁棒性的挑战。
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+四、C&W【https://arxiv.org/abs/1608.04644】
+①【https://github.com/carlini/nn_robust_attacks】849🌟官方实现：针对神经网络的鲁棒逃逸攻击以寻找对抗样本
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+🌟🌟🌟②【https://github.com/Harry24k/CW-pytorch】60🌟《Harry24k/CW-pytorch：一个“面向评估神经网络鲁棒性”的 pytorch 实现》
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+五、Ensenble MI-FGSM【https://arxiv.org/abs/1710.06081】
+目标和非目标的对抗样本攻击：🌟🌟🌟①【https://github.com/dongyp13/Non-Targeted-Adversarial-Attacks】252🌟一种非目标对抗攻击方法，在 2017 年 NIPS 非目标对抗攻击比赛中获得第一名
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+🌟🌟🌟②【https://github.com/dongyp13/Targeted-Adversarial-Attack】133🌟一种定向对抗攻击方法，赢得了 NIPS 2017 定向对抗攻击竞赛
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+六、ZOO【https://arxiv.org/abs/1708.03999】
+①【https://github.com/huanzhang12/ZOO-Attack】169🌟ZOO：基于零阶优化的深度神经网络黑盒攻击
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+🌟🌟🌟②【https://github.com/IBM/ZOO-Attack】63🌟《IBM/ZOO-Attack：用于复现“ZOO：基于零阶优化的黑盒深度神经网络攻击，无需训练替代模型”中的黑盒对抗攻击的代码》，ACM CCS AI-Security 研讨会，2017
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+七、Boundary Attack[https://arxiv.org/abs/1712.04248]
+①【https://github.com/Cold-Winter/boundary_attack_foolbox】1🌟
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+🌟🌟🌟②【https://github.com/greentfrapp/boundary-attack】99🌟根据 Brendel、Wieland、Jonas Rauber 和 Matthias Bethge 在《基于决策的对抗攻击：针对黑盒机器学习模型的可靠攻击》中描述的边界攻击算法的实现。
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+③【https://github.com/BenBadnani/Boundary-Attacks】1🌟基于决策的黑盒对抗攻击，使用 Python 实现
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+八、HGD【https://arxiv.org/abs/1712.02976】
+🌟🌟🌟①【https://github.com/lfz/Guided-Denoise】238🌟The winning submission for NIPS 2017: Defense Against Adversarial Attack of team TSAIL
+NIPS 2017 的获奖提交：TSAIL 团队的对抗性攻击防御
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+如果要找对应的CIFAR-10的数据集的实现
+②【https://github.com/AlbertMillan/hgd-adversarial-defense-pytorch】2🌟在 CIFAR-10 数据集上实现了一种名为高级表示引导去噪器（HGD）的对抗防御方法。
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+九、SAC—Digital WaterMarking【https://ieeexplore.ieee.org/document/8575371】
+🌟🌟🌟①【https://github.com/Kahsolt/adv-patch-defense】🌟使用 SegmentAndComplete (SAC) & Masked AutoEncoder (MAE) 进行对抗性补丁防御
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+十、RND【https://arxiv.org/abs/2104.11470】
+🌟🌟🌟①【https://github.com/SCLBD/BlackboxBench】120🌟
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+十一、Distillation【https://arxiv.org/abs/1511.04508】
+🌟🌟🌟①【https://github.com/JuoTungChen/Adversarial_attacks_DCNN】1🌟此存储库包含三种对抗性示例攻击的实现，包括 FGSM、噪声、语义攻击以及一种防御性蒸馏方法来防御 FGSM 攻击。
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+②【https://github.com/hiaghosh/Defensive-Distillation】1🌟CS660 Project
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+十二、MMC loss【https://arxiv.org/abs/1905.10626】
+🌟🌟🌟①【https://github.com/P2333/Max-Mahalanobis-Training】90🌟Max Mahalanobis Training (ICML 2018 + ICLR 2020)
+最大马氏距离训练（ICML 2018 + ICLR 2020）
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+②【https://github.com/futakw/Max-Mahalanobis-CenterLoss_pytorch】5🌟
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
+
+十三、KEMLP【https://arxiv.org/abs/2106.06235】
+🌟🌟🌟①【https://github.com/AI-secure/Knowledge-Enhanced-Machine-Learning-Pipeline】10🌟知识增强机器学习管道（KEMLP）存储库
+0.有无requirements.txt(pip install -r requirements.txt):
+1.操作系统:
+2.python环境:
+3.自动微分架构pytorch、tensorflow或其他:
+4.使用图像数据集类型（数据集的内容是什么）:
+
+5.硬件要求（RTX 3060是否可以,考虑显存和训练时间）:
+
